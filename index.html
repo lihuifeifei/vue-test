@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue入门</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<!--挂载点，模版，实例-->
+    <div id="root">
+        <!--<h1 v-text="number"></h1>-->
+        <div @click="handleClick">{{content}}</div>
+    </div>
+    <script>
+        new Vue({
+            el:"#root",
+            data:{
+//                msg:" World!",
+//                number:123
+                content:"hello"
+            },
+            methods:{
+                handleClick:function () {
+                    this.content="world"
+                }
+            }
+        })
+    </script>
+</body>
+</html>
